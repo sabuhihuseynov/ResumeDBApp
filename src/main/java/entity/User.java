@@ -9,6 +9,8 @@ public class User {
     private String surname;
     private String email;
     private String phone;
+    private String profileDesc;
+    private String address;
     private Date birthdate;
     private Country nationality;
     private Country birthplace;
@@ -22,12 +24,14 @@ public class User {
         this.id = id;
     }
 
-    public User(int id, String name, String surname, String email, String phone, Date birthdate, Country nationality, Country birthplace) {
+    public User(int id, String name, String surname, String email, String phone, String profileDesc, String address, Date birthdate, Country nationality, Country birthplace) {
         this.id = id;
         this.name = name;
         this.surname = surname;
         this.email = email;
         this.phone = phone;
+        this.profileDesc = profileDesc;
+        this.address = address;
         this.birthdate = birthdate;
         this.nationality = nationality;
         this.birthplace = birthplace;
@@ -96,6 +100,21 @@ public class User {
     public void setPhone(String phone) {
         this.phone = phone;
     }
+    public String getProfileDesc() {
+        return profileDesc;
+    }
+
+    public void setProfileDesc(String profileDesc) {
+        this.profileDesc = profileDesc;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
 
     public List<UserSkill> getSkills() {
         return skills;
@@ -113,6 +132,8 @@ public class User {
                 ", surname='" + surname + '\'' +
                 ", email='" + email + '\'' +
                 ", phone='" + phone + '\'' +
+                ", profileDesc='" + profileDesc + '\'' +
+                ", address='" + address + '\'' +
                 ", birthdate=" + birthdate +
                 ", nationality=" + nationality +
                 ", birthplace=" + birthplace +
